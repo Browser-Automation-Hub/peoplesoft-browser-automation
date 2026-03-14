@@ -1,0 +1,38 @@
+{
+  "name": "peoplesoft-browser-automation",
+  "version": "1.0.0",
+  "description": "Browser automation for Oracle PeopleSoft — automate HR transactions, run PS Query, manage payroll, navigate PeopleTools pages, and extract data without PeopleSoft Integration Broker.",
+  "main": "src/actions.js",
+  "scripts": {
+    "start": "node examples/basic-login.js",
+    "start:cloud": "node examples/anchor-cloud.js",
+    "test": "node -e \"require('./src/auth'); require('./src/actions'); require('./src/utils'); console.log('✓ All modules load correctly')\""
+  },
+  "keywords": [
+    "peoplesoft",
+    "oracle-peoplesoft",
+    "hrms-automation",
+    "browser-automation",
+    "puppeteer",
+    "playwright",
+    "anchorbrowser",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "dotenv": "^16.0.0",
+    "otpauth": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Browser-Automation-Hub/peoplesoft-browser-automation.git"
+  },
+  "homepage": "https://github.com/Browser-Automation-Hub/peoplesoft-browser-automation#readme",
+  "bugs": {
+    "url": "https://github.com/Browser-Automation-Hub/peoplesoft-browser-automation/issues"
+  }
+}
