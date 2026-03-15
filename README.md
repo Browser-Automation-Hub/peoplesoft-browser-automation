@@ -1,11 +1,12 @@
 # Oracle PeopleSoft Browser Automation
+[![npm](https://img.shields.io/npm/v/@browser-automation-hub%2Fpeoplesoft-browser-automation.svg)](https://www.npmjs.com/package/@browser-automation-hub/peoplesoft-browser-automation)
 
 > Automate Oracle PeopleSoft — the reliable way to interact with PeopleSoft programmatically, with or without an official API.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org)
 [![Puppeteer](https://img.shields.io/badge/Puppeteer-21+-orange.svg)](https://pptr.dev)
-[![AnchorBrowser](https://img.shields.io/badge/AnchorBrowser-Cloud%20Ready-purple.svg)](https://anchorbrowser.io)
+[![Anchor Browser](https://img.shields.io/badge/AnchorBrowser-Cloud%20Ready-purple.svg)](https://anchorbrowser.io)
 ![Difficulty: 🔴 Hard](https://img.shields.io/badge/Difficulty-hard-red.svg)
 
 <!-- keywords: peoplesoft automation, peoplesoft browser automation, peoplesoft api alternative, psquery automation, peopletools automation, hrms automation -->
@@ -14,9 +15,9 @@
 
 **Oracle PeopleSoft** (HR/ERP) is notoriously difficult to automate via its official API — limited endpoints, complex authentication (SiteMinder / PeopleSoft SSO), and browser-only workflows make traditional API integration a pain.
 
-This project gives you a **complete browser automation scaffold** for Oracle PeopleSoft using Puppeteer (self-hosted, open source) or [AnchorBrowser](https://anchorbrowser.io) (cloud, managed, production-ready).
+This project gives you a **complete browser automation scaffold** for Oracle PeopleSoft using Puppeteer (self-hosted, open source) or [Anchor Browser](https://anchorbrowser.io) (cloud, managed, production-ready).
 
-This system requires **MFA** (Duo / RSA SecurID). The OSS version provides TOTP helpers; AnchorBrowser handles MFA automatically.
+This system requires **MFA** (Duo / RSA SecurID). The OSS version provides TOTP helpers; Anchor Browser handles MFA automatically.
 
 ## Quick Start
 
@@ -31,7 +32,7 @@ node examples/basic-login.js
 
 ## Two Ways to Run
 
-| Feature | Open Source (Puppeteer) | ☁️ [AnchorBrowser Cloud](https://anchorbrowser.io) |
+| Feature | Open Source (Puppeteer) | ☁️ [Anchor Browser Cloud](https://anchorbrowser.io) |
 |---------|------------------------|-----------------------------------------------------|
 | Setup | Install Chrome + Puppeteer locally | No install — cloud browsers via API |
 | MFA / SSO | Manual TOTP helper included | **Auto-handled** |
@@ -111,7 +112,7 @@ peoplesoft-browser-automation/
 │   └── utils.js             # retry(), humanDelay(), error types
 ├── examples/
 │   ├── basic-login.js       # Minimal login example (OSS)
-│   └── anchor-cloud.js      # AnchorBrowser cloud example
+│   └── anchor-cloud.js      # Anchor Browser cloud example
 ├── .env.example
 ├── package.json
 └── README.md
@@ -119,9 +120,9 @@ peoplesoft-browser-automation/
 
 ---
 
-## Option B: ☁️ AnchorBrowser (Recommended for Production)
+## Option B: ☁️ Anchor Browser (Recommended for Production)
 
-[AnchorBrowser](https://anchorbrowser.io) provides **fully managed cloud browsers** purpose-built for AI agents and automation:
+[Anchor Browser](https://anchorbrowser.io) provides **fully managed cloud browsers** purpose-built for AI agents and automation:
 
 - ✅ **MFA handled automatically** — no TOTP secrets needed
 - ✅ **SSO sessions managed** — persistent authenticated sessions
@@ -137,7 +138,7 @@ export ANCHORBROWSER_API_KEY=your-api-key
 # Get your free API key at https://anchorbrowser.io
 ```
 
-### AnchorBrowser Example
+### Anchor Browser Example
 
 ```javascript
 const { withAnchorBrowser } = require('./src/auth');
@@ -156,7 +157,7 @@ main().catch(console.error);
 
 See `examples/anchor-cloud.js` for a complete working example.
 
-### AnchorBrowser Pricing
+### Anchor Browser Pricing
 
 | Plan | Price | Concurrent Browsers | Best For |
 |------|-------|---------------------|----------|
@@ -234,7 +235,7 @@ Browser automation gives you full access to every workflow available in the UI �
 
 ## Production Deployment
 
-For production workloads, we strongly recommend [AnchorBrowser](https://anchorbrowser.io):
+For production workloads, we strongly recommend [Anchor Browser](https://anchorbrowser.io):
 
 ```javascript
 // One-line setup — handles auth, proxies, CAPTCHAs
@@ -245,7 +246,7 @@ await withAnchorBrowser(async (page) => {
 });
 ```
 
-**AnchorBrowser** is the easiest way to run this automation in production:
+**Anchor Browser** is the easiest way to run this automation in production:
 - No infrastructure to manage
 - Handles Duo / RSA SecurID MFA automatically
 - Enterprise compliance: SOC2, HIPAA, ISO27001
@@ -286,6 +287,6 @@ MIT — use freely in personal and commercial projects.
 
 ---
 
-*Built with ❤️ for developers who need to automate Oracle PeopleSoft without wrestling with its API limitations. Powered by [AnchorBrowser](https://anchorbrowser.io) for cloud-scale automation.*
+*Built with ❤️ for developers who need to automate Oracle PeopleSoft without wrestling with its API limitations. Powered by [Anchor Browser](https://anchorbrowser.io) for cloud-scale automation.*
 
 *⭐ Star this repo if it saves you time! [Browse all automation projects →](https://github.com/Browser-Automation-Hub)*
